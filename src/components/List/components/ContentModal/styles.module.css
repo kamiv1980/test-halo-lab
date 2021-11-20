@@ -1,0 +1,225 @@
+
+.wrapper{
+    padding: 0.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.category{
+    font-family: Roboto, serif;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #000000;
+    opacity: 0.5;
+}
+.name{
+    font-family: Roboto, serif;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    color: #000000;
+    margin: 5px 0px;
+}
+.cost{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 260px;
+    height: 60px;
+    margin: 0.5rem auto;
+}
+.symbol{
+
+    margin: 8px 8px 0 0;
+    align-self: start;
+    font-family: Roboto, serif;
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+.price{
+    font-family: Roboto, serif;
+    font-size: 60px;
+    line-height: 72px;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+.form {
+    margin: 1rem auto;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+}
+.input_block{
+    margin-top: 5px;
+    position: relative;
+    height: 80px;
+}
+.input{
+    display: block;
+    padding: 1rem;
+    width: 260px;
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    border-radius: 16px;
+
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+.input_valid{
+    border: 1px solid rgba(0, 0, 0, 0.2)
+}
+.input_invalid{
+    border: 2px solid #E43F3F
+}
+.button_close{
+    cursor: pointer;
+    background: #F2F2F2;
+    position: absolute;
+    z-index: 1000;
+    left: 92%;
+    top: -2%;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    font-size: 31px;
+    line-height: 0px;
+    padding: 16px 3px;
+}
+.button_close:hover {
+    border: 1px solid #AEAEAE;
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+.button_close:focus {
+    border: 1px solid #AEAEAE;
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+
+.button_close:before {
+    content: "×";
+}
+.button_order {
+    margin-top: 1rem ;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 6.44rem;
+    width: 260px;
+    height: 50px;
+    background: #4BCFA0;
+    border-radius: 16px;
+
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.error{
+    margin: 2px 0;
+    text-align: start;
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.02em;
+    color: #E43F3F;
+}
+.button_clear{
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    cursor: pointer;
+    background: #E43F3F;;
+    position: absolute;
+    z-index: 2000;
+    left: 88%;
+    top:20%;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    font-size: 20px;
+    line-height: 0px;
+    padding: 8px 3px;
+}
+
+.button_clear:before {
+    content: "×";
+}
+.button_clear:hover {
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+.button_clear:focus {
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+@media (min-width: 768px){
+    .wrapper {
+        padding: 1.5rem;
+    }
+    .cost{
+        width: 275px;
+        height: 65px;
+    }
+    .form {
+        margin: 1.1rem auto;
+        width: 275px;
+    }
+    .input {
+        width: 275px;
+        height: 53px;
+    }
+    .button_order {
+        margin-top: 1.2rem ;
+        width: 275px;
+        height: 53px;
+    }
+    .button_order:hover {
+        transform: scale(1.1);
+        transition-duration: 0.5s;
+    }
+    .button_order:focus {
+        transform: scale(1.1);
+        transition-duration: 0.5s;
+    }
+}
+
+@media (min-width: 1200px) {
+    .wrapper {
+        padding: 2.5rem;
+    }
+    .cost{
+        width: 288px;
+        height: 72px;
+    }
+    .form {
+        margin: 1.25rem auto;
+        width: 288px;
+    }
+    .input {
+        width: 288px;
+        height: 56px;
+    }
+    .button_order {
+        margin-top: 1.5rem ;
+        width: 288px;
+        height: 56px;
+    }
+}

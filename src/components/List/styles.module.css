@@ -1,0 +1,73 @@
+.container{
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.list{
+    margin: 50px auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.button_cheapest{
+    display: block;
+    margin: 0 auto;
+    padding: 16px 48px;
+    width: 235px;
+    height: 60px;
+    background: #50DAA8;
+    border-radius: 16px;
+
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+}
+.button_cheapest:hover {
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+.button_cheapest:focus {
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+
+.mymodal {
+    position: fixed;
+    width: 280px;
+    height: 450px;
+    background: #FFFFFF;
+    border-radius: 1rem;
+}
+
+.myoverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px){
+    .mymodal {
+        width: 334px;
+        height: 500px;
+        border-radius: 1.25rem;
+    }
+}
+@media (min-width: 1200px){
+    .mymodal {
+        width: 384px;
+        height: 536px;
+        border-radius: 1.5rem;
+    }
+}
