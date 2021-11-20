@@ -24,5 +24,3 @@ export const store = createStore(
   rootReducer,
   composeWithDevTools(applyMiddleware(thunk, loggerMiddleware, loadingChecker)),
 );
-
-// export const persistor = persistStore(store);
