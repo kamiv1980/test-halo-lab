@@ -11,7 +11,7 @@ export const getProducts = () => (dispatch) => {
 
   const options = {
     method: 'GET',
-    url: 'https://run.mocky.io/v3/b7d36eea-0b3f-414a-ba44-711b5f5e528e',
+    url: 'https://run.mocky.io/v3/a0a14b2c-7207-45f0-9a5f-cba4bd067e58',
   };
   axios(options)
     .then((res) => {

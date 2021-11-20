@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import styles from './styles.module.css';
+import { ReactComponent as CardLogo } from './card.svg';
 
 export const Card = memo(({ item, handleModalData }) => {
   return (
@@ -11,7 +12,7 @@ export const Card = memo(({ item, handleModalData }) => {
           <p className={styles.symbol}>$</p>
           <p className={styles.price}>{item.price}</p>
           <button onClick={handleModalData(item)} className={styles.button_buy}>
-            Buy
+            <CardLogo className={styles.icon_card} />
           </button>
         </div>
       </div>

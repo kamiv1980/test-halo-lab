@@ -1,8 +1,8 @@
 /** @format */
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 import styles from './styles.module.css';
 
-export const Content = ({ handleClose, item }) => {
+export const ContentModal = memo(({ handleClose, item }) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const [nameDirty, setNameDirty] = useState(false);
@@ -20,30 +20,31 @@ export const Content = ({ handleClose, item }) => {
         break;
     }
   };
-
-  const handleClearName = () => {
+  const clearName = () => {
     setName('');
     setNameDirty(false);
     setNameError('This field in required');
   };
-
-  const handleClearNumber = () => {
+  const clearNumber = () => {
     setNumber('');
     setNumberDirty(false);
     setNumberError('This field in required');
+  };
+  const handleClearName = () => {
+    clearName();
+  };
+
+  const handleClearNumber = () => {
+    clearNumber();
   };
 
   const handleFocus = (evt) => {
     switch (evt.target.name) {
       case 'name':
-        setName('');
-        setNameDirty(false);
-        setNameError('This field in required');
+        clearName();
         break;
       case 'number':
-        setNumber('');
-        setNumberDirty(false);
-        setNumberError('This field in required');
+        clearNumber();
         break;
     }
   };
@@ -82,8 +83,8 @@ export const Content = ({ handleClose, item }) => {
     setNameDirty(true);
     setNumberDirty(true);
     if (!nameError && !numberError) {
-      console.log('Name', name);
-      console.log('Number', number);
+      console.log('Name: ', name);
+      console.log('Number: ', number);
       handleClose();
     }
   };
@@ -146,4 +147,4 @@ export const Content = ({ handleClose, item }) => {
       </form>
     </div>
   );
-};
+});

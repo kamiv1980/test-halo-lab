@@ -1,14 +1,14 @@
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './styles.module.css';
-import { useEffect, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 import Modal from 'react-modal';
 
 import { selectorMinPrice, selectorProducts } from '../../services/products/selectors';
 import { selectorIsLoading } from '../../services/overlay/selectors';
 import { getProducts } from '../../services/products/operations';
-import { Card, Loader, Content } from './components';
+import { Card, Loader, ContentModal } from './components';
 
-export const List = () => {
+export const List = memo(() => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -48,7 +48,7 @@ export const List = () => {
               className={styles.mymodal}
               overlayClassName={styles.myoverlay}
             >
-              <Content item={modalData} handleClose={handleModal} />
+              <ContentModal item={modalData} handleClose={handleModal} />
             </Modal>
           )}
           <button className={styles.button_cheapest} onClick={handleModalData(productMinPrice)}>
@@ -58,4 +58,4 @@ export const List = () => {
       )}
     </>
   );
-};
+});

@@ -59,10 +59,10 @@
     margin-left: auto;
     padding: 1rem;
     width: 64px;
-    height: 56px;
+    height: 64px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
-    border-radius: 1rem;
+    border-radius: 50%;
     cursor: pointer;
     font-family: Roboto, serif;
     font-weight: 500;
@@ -71,15 +71,22 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #4BCFA0;
+    stroke:#4BCFA0;
 }
 .button_buy:hover{
     background: #4BCFA0;
     color: #FFFFFF;
+    stroke: #FFFFFF;
 }
 .button_buy:focus{
     background: #4BCFA0;
     color: #FFFFFF;
+    stroke: #FFFFFF;
 }
+.icon_card{
+    margin-top: 0.25rem;
+}
+
 @media (min-width: 768px){
     .card {
         padding: 1.5rem;
@@ -107,5 +114,14 @@
         height: 72px;
         margin: 2.5rem 0;
     }
-
+    .button_buy{
+        height: 56px;
+        border-radius: 1rem;
+    }
+    .button_buy:before{
+    content: 'buy'
+    }
+    .icon_card{
+        display: none;
+    }
 }
