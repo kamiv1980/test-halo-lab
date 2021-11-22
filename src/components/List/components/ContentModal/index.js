@@ -21,20 +21,20 @@ export const ContentModal = memo(({ handleClose, item }) => {
     }
   };
   const clearName = () => {
-    setName('');
     setNameDirty(false);
     setNameError('This field in required');
   };
   const clearNumber = () => {
-    setNumber('');
     setNumberDirty(false);
     setNumberError('This field in required');
   };
   const handleClearName = () => {
+    setName('');
     clearName();
   };
 
   const handleClearNumber = () => {
+    setNumber('');
     clearNumber();
   };
 
